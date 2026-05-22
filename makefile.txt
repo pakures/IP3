@@ -1,0 +1,21 @@
+module.o:
+	g++ -c Car.cpp Motorcycle.cpp Garage.cpp MinFuelStrategy.cpp MaxFuelStrategy.cpp AverageFuelStrategy.cpp
+
+build-demo:
+	g++ demo.cpp Car.cpp Motorcycle.cpp Garage.cpp MinFuelStrategy.cpp MaxFuelStrategy.cpp AverageFuelStrategy.cpp -o demo
+
+run-demo:
+	./demo
+
+build-test:
+	g++ test.cpp Car.cpp Motorcycle.cpp Garage.cpp MinFuelStrategy.cpp MaxFuelStrategy.cpp AverageFuelStrategy.cpp -o test
+
+run-test:
+	./test
+
+clean:
+	rm -f *.o demo test
+
+rebuild:
+	make clean
+	make build-demo
