@@ -18,6 +18,9 @@ public:
     Vehicle(const std::string &brand, double distance);
     virtual ~Vehicle();
 
+    Vehicle(const Vehicle &) = delete;
+    Vehicle &operator=(const Vehicle &) = delete;
+
     int getId() const;
     std::string getBrand() const;
     double getDistance() const;
