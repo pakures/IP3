@@ -51,5 +51,5 @@ double Car::calculateFuelConsumption() const
 
 Vehicle *Car::clone() const
 {
-    return new Car(*this);
+    return new Car(brand, distance, liters);
 }
