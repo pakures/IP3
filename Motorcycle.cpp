@@ -19,5 +19,5 @@ double Motorcycle::calculateFuelConsumption() const
 
 Vehicle *Motorcycle::clone() const
 {
-    return new Motorcycle(*this);
+    return new Motorcycle(brand, distance, engineSize);
 }
